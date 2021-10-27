@@ -4,10 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Setimeout</title>
+    <title>Document</title>
+    <style>
+        #container{
+    display: flex;
+    text-align: center;
+    justify-content:end;
+    align-items:center;
+    flex-direction:column;
+}
+    </style>
 </head>
 <body>
-    <!-- <h1>Hello</h1> -->
-    <script src="script.js"></script>
+    <div id="container">
+        <div id="button"><button onclick="countdown(callback)">Start</button></div>
+    </div>
+   
 </body>
+<script>
+   function countdown(callback) {
+    let i = 10;
+    setTimeout(() => {
+
+        setTimeout(() => {
+            i--;
+            setTimeout(() => {
+                i--;
+                setTimeout(() => {
+                    i--;
+                    setTimeout(() => {
+                        i--;
+                        setTimeout(() => {
+                            i--;
+                            setTimeout(() => {
+                                i--;
+                                setTimeout(() => {
+                                    i--;
+                                    setTimeout(() => {
+                                        i--;
+                                        setTimeout(() => {
+                                            i--;
+                                            setTimeout(() => {
+                                                i--;
+                                                setTimeout(() => {
+                                                    i--;
+
+                                                }, 1000)
+                                                callback(i);
+
+                                            }, 1000)
+                                            callback(i);
+                                        }, 1000)
+                                        callback(i);
+                                    }, 1000)
+                                    callback(i);
+                                }, 1000)
+                                callback(i);
+                            }, 1000)
+                            callback(i);
+                        }, 1000)
+                        callback(i);
+                    }, 1000)
+                    callback(i);
+                }, 1000)
+                callback(i);
+            }, 1000)
+            callback(i);
+        }, 1000);
+        callback(i);
+    }, 1000);
+}
+function callback(i) {
+    if (i == 0) {
+        document.getElementById("counting").innerHTML = "Happy Birthday!!";
+    }
+   else  document.getElementById("counting").innerHTML = i;
+}
+</script>
 </html>
